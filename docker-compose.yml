@@ -20,6 +20,8 @@ services:
   app:
     image: nikitakvl/url-shortener.app
     container_name: URL-shortener
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
     ports:
       - "8080:8080"
     depends_on:
